@@ -66,9 +66,6 @@ class SignUP_profile extends Component {
                                 <input type="email" className="form-control" name="email" id="eName" placeholder="e-mail" />
                             </div>
                         </div>
-
-                    </form>
-                </div>
                     <div className="form-group formProfile">
                         <i className="fa fa-check-circle col-xs-3" aria-hidden="true" />
                         <div className="col-xs-8">
@@ -98,6 +95,7 @@ class SignUP_profile extends Component {
                             }
                        </div>
                     </div>
+                    </form></div>        
 			</div>
 
 		);

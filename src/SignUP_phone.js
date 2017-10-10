@@ -10,6 +10,58 @@ import {
 } from 'react-router-dom'
 
 
+
+const Modal=(randomCode)=>{
+  console.log(randomCode);
+  //alert("holi");
+  return(
+        <div className="modal fade"
+             id="modalCode"
+              role="dialog">
+          <div className="modal-dialog">
+                {/* Modal content*/}
+              <div className="modal-content">
+                  <div className="modal-header">
+                    <button
+                        type="button"
+                        className="close"
+                        data-dismiss="modal">×</button>
+                        <h4 className="modal-title">
+                        Your code is
+                        </h4>
+                  </div>
+                  <div className="modal-body" id="modalBody">
+                  {randomCode}
+                  </div>
+                  <div className="modal-footer">
+                     <button
+                        type="button"
+                        className="btn btn-default"
+                        data-dismiss="modal">Close</button>
+                 </div>
+                </div>
+              </div>
+            </div>
+
+  );
+}
+const Random = ()=>{
+  let text = "";
+  let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (let i = 0; i < 5; i++)
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+  console.log(text);
+  return text;
+}
+
+const getCode=()=>{
+  let code=Random();
+  let randomCode = "LAB-" + code;
+  alert("Your code is: " + randomCode);
+  Modal(randomCode);
+}
+
 const SignUP_phone = ({model}) => {
     return (
         <div>
@@ -71,9 +123,12 @@ const SignUP_phone = ({model}) => {
                 </form>
               </div >
               <div className="col-md-12 col-xs-12 btn-next">
-                <NavLink to={"/signup_profile"}
-                  className="btn btn-lg btn-block next">
+                <NavLink to={"/signup_profile"}>
+                  <button
+                  className="btn btn-lg btn-block next"
+                  onClick={getCode}>
                   Next
+                  </button>
                 </NavLink>
             </div>
             </div>
