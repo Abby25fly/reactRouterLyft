@@ -1,4 +1,4 @@
-body{
+/* body{
   background-image: url(images/LyftLux.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -34,3 +34,157 @@ body{
   background:-webkit-linear-gradient(left, purple,#FF00FF);
     border: transparent;
   }
+  export default SingUp;
+  .flecha {
+      padding-top: 30px;
+      padding-right: 20px;
+  }
+  
+  h1 {
+      font-weight: bolder;
+  }
+  
+  .form-group {
+      width: 130px;
+  }
+  
+  span {
+      position: absolute;
+      z-index: 100;
+      left: 64px;
+      top: 7px;
+  }
+  
+  input {
+      padding-left: 42px !important;
+      position: relative;
+  }
+  
+  .btn-next {
+      position: absolute;
+      bottom: 30px;
+      padding: 80px 20px;
+      padding-bottom: 0;
+      width: 100%;
+      text-decoration: none;
+  }
+  
+  .next {
+      background-color: #d6155c;
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      text-decoration: none;
+  }
+  
+  button:hover {
+      background: -webkit-linear-gradient(left, purple, #FF00FF);
+      border: transparent;
+      text-decoration: none;
+      color: white;
+  } */
+
+
+/* .flecha {
+    padding-top: 30px;
+    padding-right: 20px;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+.form-group {
+    width: 130px;
+}
+
+span {
+    position: absolute;
+    z-index: 100;
+    left: 64px;
+    top: 7px;
+}
+
+input {
+    padding-left: 42px !important;
+    position: relative;
+}
+
+.btn-next {
+    position: absolute;
+    bottom: 30px;
+    padding: 80px 20px;
+    padding-bottom: 0;
+    width: 100%;
+    text-decoration: none;
+}
+
+.next {
+    background-color: #d6155c;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+button:hover {
+    background: -webkit-linear-gradient(left, purple, #FF00FF);
+    border: transparent;
+    text-decoration: none;
+    color: white;
+} */
+
+.flecha {
+    padding-top: 30px;
+    padding-right: 20px;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+.inputIcon {
+    padding-left: 35px;
+}
+
+input {
+    width: 100%;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.icon {
+    position: relative;
+    top: 28px;
+    left: 10px;
+    z-index: 2000;
+}
+
+.check {
+    left: 80px;
+    text-align: justify;
+}
+
+.btn-next {
+    position: absolute;
+    bottom: 30px;
+    padding: 80px 20px;
+    padding-bottom: 0;
+    width: 100%;
+    text-decoration: none;
+}
+
+.next {
+    background-color: #d6155c;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+button:hover {
+    background: -webkit-linear-gradient(left, purple, #FF00FF);
+    border: transparent;
+    text-decoration: none;
+    color: white;
+}
