@@ -30,7 +30,7 @@ const App = (props) => {
 				<Route  path="/signup_profile" render={() => <SignUP_profile model={model} />}/>
 				<Route  path="/map" render={() => <Map model={model} />}/>
 
-				<Route component={NotFound}/>
+				<Route component={Home}/>
 			</Switch>
 	</BrowserRouter>)
 }
