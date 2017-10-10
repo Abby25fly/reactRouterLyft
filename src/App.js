@@ -3,10 +3,6 @@ import logo from "./logo.svg";
 import "./App.css";
 
 class App extends Component {
-setField (e) {
-  this.setState({[e.target.number]: e.target.value})
-  // guarda los valores de los inputs
- }
   render() {
     return(
       <div>
@@ -42,9 +38,15 @@ setField (e) {
                       </div>
                     </div>
                     <input
-                    input id="telNumber"
+                      id="telNumber"
                       className="form-control"
-                      type="tel" onChange={(e)=>this.setField(e)} name="number"
+                      type="tel"
+                      data-validation="number"
+                      maxLength={9}
+                      placeholder={986171293}
+                      pattern=".{9,}"
+                      title="9 números o menos"
+                      required
                     />
                   </div>
                   <br />
