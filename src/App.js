@@ -1,38 +1,40 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import {
+	BrowserRouter,
+	Route,
+	Switch,
+	NavLink,
+	Redirect
+} from 'react-router-dom'
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="container-fluid">
-        <div className="row">
-          <div className="text-center logo">
-            <img src="images/logo.png" alt="logo" />
-          </div>
-          <div className="container botones">
-            <div className="row">
-              <div className="col-md-6 col-xs-6">
-                <a href="#">
-                  <button type="button" name="button">
-                    Log in
-                  </button>
-                </a>
-              </div>
-              <div className="col-md-6 col-xs-6">
-                <a href="signUp.html">
-                  <button type="button" name="button">
-                    Sign up
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+import Home from './Home';
+import SignUp_phone from './SignUP_phone';
+import SignUP_profile from './SignUP_profile';
+import Map from './Map';
 
-    );
-  }
+const NotFound = (props) => {
+	return (
+		<div><h2> Error 404! </h2></div>
+	);
+}
+
+const App = (props) => {
+	const {model} =  props;
+	console.log('app.props', props)
+	return (<BrowserRouter>
+			<Switch>
+				<Route exact path="/"
+				       render={() => <Redirect to= {'/home'}/>}/>
+				<Route  path="/home" render={() => <Home model={model} />}/>
+				<Route  path="/signup_phone" render={() => <SignUp_phone model={model} />}/>
+				<Route  path="/signup_profile" render={() => <SignUP_profile model={model} />}/>
+				<Route  path="/map" render={() => <Map model={model} />}/>
+
+				<Route component={NotFound}/>
+			</Switch>
+	</BrowserRouter>)
 }
 
 export default App;
+
