@@ -74,26 +74,27 @@ class SignUP_profile extends Component {
                                 <input type="email" className="form-control" name="email" id="eName" placeholder="e-mail" />
                             </div>
                         </div>
+                        <label className="form-check-label">
+						<input className="form-check-input" id="agreeUser" type="checkbox" onChange={onInputChange}/>
+						I agree to Lyft's <a href="lyft.com"> Terms of Service</a>
+                        </label>
+
+                        {
+                            this.state.goFordward ?
+                                <NavLink
+                                    to={"/map"}>
+                                    <button
+                                    className="btn btn-lg btn-block btn-lyft next">Next</button>
+                                </NavLink>
+                                :
+                                <button
+                                    className="btn btn-lg btn-block btn-lyft next disabled">Next</button>
+
+                        }
                         </form>
                         </center>
                     </div>
-					<label className="form-check-label">
-						<input className="form-check-input" id="agreeUser" type="checkbox" onChange={onInputChange}/>
-						I agree to Lyft's <a href="lyft.com"> Terms of Service</a>
-					</label>
-
-					{
-						this.state.goFordward ?
-							<NavLink
-								to={"/map"}>
-                                <button
-								className="btn btn-lg btn-block btn-lyft">Next</button>
-                            </NavLink>
-							:
-							<button
-								className="btn btn-lg btn-block btn-lyft disabled">Next</button>
-
-					}
+					
 
 				</section>
 			</div>

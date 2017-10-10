@@ -21,14 +21,14 @@ const Home = ( {model} ) => {
               <div className="row">
                 <div className="col-md-6 col-xs-6">
                   <a href="#">
-                    <button type="button" name="button">
+                    <button  className="Homebtn" type="button" name="button">
                       Log in
                     </button>
                   </a>
                 </div>
                 <div className="col-md-6 col-xs-6">
                   <NavLink to="/signup_phone">
-                    <button type="button" name="button">
+                    <button className="Homebtn" type="button" name="button">
                       Sign up
                     </button>
                   </NavLink>

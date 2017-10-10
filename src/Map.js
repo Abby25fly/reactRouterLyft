@@ -1,76 +1,94 @@
-import React, { Component } from 'react';
-import './Map.css';
-import {
-  withScriptjs,
-  withGoogleMap,
-  GoogleMap,
-  Marker,
-} from "react-google-maps";
+import React, {Component} from 'react';
+import GoogleMaps from './GoogleMaps';
+import ReactGoogleAutocomplete from './ReactGoogleAutocomplete';
+ import {
+	BrowserRouter,
+	Route,
+	Switch,
+	NavLink,
+	Redirect
+} from 'react-router-dom'
 
-class App extends Component {
-  findMe(){
 
-  }
-  render() {
-    const MapWithAMarker = withScriptjs(withGoogleMap(props =>
-      <div>
-        <GoogleMap
-          defaultZoom={8}
-          defaultCenter={{ lat: -34.397, lng: 150.644 }}
-        >
-           <Marker onClick={this.onMarkerClick}
-                name={'Current location'} />
-        </GoogleMap>
-      </div>
-    ));
-    const User = () => {
-      return (
-        <div className="container-fluid formT">
-          <div className="row">
-            <div className="col-md-3 col-sm-3">
-              <button id="findMe" onClick={this.findMe}>
-                <i className="fa fa-thumb-tack" aria-hidden="true" />  Where am I?
-              </button>
-            </div>
-            <div className="col-md-3 col-sm-3">
-              <input
-                type="text"
-                id="origin"
-                placeholder="origin" />
-            </div>
-            <div className="col-md-3 col-sm-3">
-              <input
-                type="text"
-                id="destination"
-                placeholder="Destination" />
-            </div>
-            <div className="col-md-3 col-sm-3">
-              <button id="setPickup">
-                <i className="fa fa-car" aria-hidden="true" />  Set PickUp
-              </button>
-            </div>
-          </div>
-        </div>
-      );
-    }
-    return (
-      <section id="buscador">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-md-12 col-sm-12 col-xs-12" id="map">
-              <MapWithAMarker
-                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfLX9KkhVpllYBAV-geQe_N2R_Xl1t8zc&v=3.exp&libraries=geometry,drawing,places"
-                loadingElement={<div style={{ height: `100%` }} />}
-                containerElement={<div style={{ height: `400px` }} />}
-                mapElement={<div style={{ height: `100%` }} />}
-              />
-            </div >
-          </div >
-        </div >
-        <User />
-      </section >
-    )
-  }
+const LyftMap = ({model}) => {
+
+	const state = {
+		properties: model.properties,
+		activeProperty: model.activeProperty,
+		filterIsVisible: false,
+		filteredProperties: [],
+		isFiltering: false,
+		isRouting: model.isRouting
+	};
+	const {
+		properties,
+		activeProperty,
+		filterIsVisible,
+		filteredProperties,
+		isFiltering,
+		isRouting
+	} = state;
+	const propertiesList = isFiltering ? filteredProperties : properties;
+
+	const setActiveProperty = (property, scroll) => {
+		//this.setState({
+		//	activeProperty: property,
+		//});
+		model.setActiveProperty(property);
+
+		const {index} = property;
+
+		// Scroll to active property
+		if (scroll) {
+			const target = `#card-${index}`;
+			//jump(target, {
+			//	duration: 800,
+			//	easing: easeInOutCubic,
+			//});
+		}
+	}
+	const onPathBntClick = () => {
+		model.setIsRouting();
+	}
+
+	return (<div>
+
+		<h2>LyftMap </h2>
+
+		<div className="col-md-3 col-sm-3">
+			<div className="form-group">
+				<label htmlFor="destino"> Destino </label>
+				<ReactGoogleAutocomplete
+					onPlaceSelected={(place) => {
+
+						console.log (place);
+						model.setTarget (place);
+
+					}}
+					componentRestrictions={{country: "pe"}}
+				/>
+			</div>
+		</div>
+		<div className="col-md-3 col-sm-3">
+			<button id="ruta" className="btn btn-success" onClick={onPathBntClick}>
+				<i className="fa fa-bicycle" aria-hidden="true"></i>
+				Ruta
+			</button>
+		</div>
+		<GoogleMaps
+			model = {model}
+			properties={properties}
+			activeProperty={activeProperty}
+			setActiveProperty={setActiveProperty}
+			filteredProperties={filteredProperties}
+			isFiltering={isFiltering}
+			isRouting={isRouting}
+		/>
+
+
+
+	</div>);
 }
 
-export default App;
+
+export default LyftMap;

@@ -19,7 +19,7 @@
       width: 100%;
     text-decoration: none;
     }
-    button{
+.Homebtn {
     border:white 3px solid;
       width: 100%;
       padding: 10px;
@@ -29,7 +29,7 @@
     font-weight: bold;
     background-color: transparent;
     }
-    button:hover{
+.Homebtn:hover{
     background:-webkit-linear-gradient(left, purple,#FF00FF);
       border: transparent;
     }

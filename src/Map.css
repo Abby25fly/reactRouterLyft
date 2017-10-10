@@ -8,19 +8,7 @@
     border: 2px solid black;
   }
   
-  button{
-    margin: 15px auto;
-    padding: 10px 15px;
-    color: white;
-    background-color: #f756b4;
-    border: 0;
-    font-weight: 700;
-    border-radius: 2px;
-    font-family: 'Raleway', sans-serif;
-    font-family: 'Passion One', cursive ;
-    font-size: 15px;
-    display:block;
-  }
+
   
 .formT input{
     margin: 14px auto;
@@ -32,9 +20,7 @@
     width: 300px;
   }
   
-  button:hover, button:focus{
-    outline: 0;
-  }
+ 
   
   #carLyft{
     width: 80px;
