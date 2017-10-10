@@ -69,7 +69,7 @@ class SignUP_profile extends Component {
 
                     </form>
                 </div>
-                    <div className="form-group">
+                    <div className="form-group formProfile">
                         <i className="fa fa-check-circle col-xs-3" aria-hidden="true" />
                         <div className="col-xs-8">
                             <label className="form-check-label">

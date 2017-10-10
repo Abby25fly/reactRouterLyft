@@ -25,7 +25,7 @@ class App extends Component {
     ));
     const User = () => {
       return (
-        <div className="container-fluid">
+        <div className="container-fluid formT">
           <div className="row">
             <div className="col-md-3 col-sm-3">
               <button id="findMe" onClick={this.findMe}>

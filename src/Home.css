@@ -3,12 +3,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    }
-    .logo{
+    height: 700px;
+}
+.logo{
     padding-top: 10%;
     }
-    .logo img{
+.logo img{
     width: 150px;
     }
     .botones{
@@ -29,7 +29,6 @@
     font-weight: bold;
     background-color: transparent;
     }
-    
     button:hover{
     background:-webkit-linear-gradient(left, purple,#FF00FF);
       border: transparent;

@@ -6,7 +6,6 @@ import {
 	NavLink,
 	Redirect
 } from 'react-router-dom'
-import './App.css';
 
 import Home from './Home';
 import SignUp_phone from './SignUP_phone';
