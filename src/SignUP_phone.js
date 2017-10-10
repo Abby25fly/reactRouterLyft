@@ -95,6 +95,6 @@ class SingUp extends Component {
       </div>
     );
 
-    );
+  
   }
 }
