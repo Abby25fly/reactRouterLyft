@@ -61,7 +61,7 @@ class SignUP_phone extends Component {
         </header>
       );
     }
-    
+
     const Countries = () => {
       return (
         <div className="input-group-btn ">
@@ -97,40 +97,32 @@ class SignUP_phone extends Component {
                       pattern=".{9,}"
                       title="9 números o menos"
                       required
-                      onChange={onInputChange}/>
+                      onChange={onInputChange} />
                   </div>
                   <br />
                   <h5> We´ll send a text to verify your phone</h5>
+                  {
+                    this.state.complete ?
+                      <NavLink to={"/signup_validation"}>
+                        <button
+                          className="btn btn-lg btn-block next">
+                          Next
+                  </button>
+                      </NavLink>
+                      :
+                      <button
+                        className="btn btn-lg btn-block next disabled">Next</button>
+                  }
                 </form>
               </div >
-              <BtnNext />
             </div>
           </div>
         </section>
       );
     }
-    
-    const BtnNext = () => {
-      return (
-        <div className="col-md-12 col-xs-12 btn-next">
-          {
-            this.state.complete ?
-              <NavLink to={"/signup_validation"}>
-                <button
-                  className="btn btn-lg btn-block next">
-                  Next
-                  </button>
-              </NavLink>
-              :
-              <button
-                className="btn btn-lg btn-block next disabled">Next</button>
-    
-          }
-    
-        </div>
-      );
-    }
-    
+
+
+
     return (
       <div className="container-fluid" >
         <div className="row">

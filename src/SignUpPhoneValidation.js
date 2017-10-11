@@ -60,21 +60,37 @@ class SignUpPhoneValidation extends Component {
   validatePin(input) {
     this.pinUser = input;
   }
+
+
   render() {
+
+    const HeaderValidation = () => {
+      return (
+        <header>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-1 col-xs-1 text-center">
+                <a href="javascript:window.history.back();">
+                  <i
+                    className="fa fa-chevron-left arrow"
+                    aria-hidden="true" />
+                </a>
+              </div>
+              <div className="col-md-10 col-xs-10 text-center">
+                <h1>Sign Up</h1>
+                <br />
+                <p>Join now for free ride credit</p>
+              </div>
+            </div>
+          </div>
+        </header>
+      );
+    }
+
+
     return (
       <div className="text-center">
-        <header>
-          <div className="col-md-1 col-xs-1 text-center">
-            <a href="javascript:window.history.back();">
-              <i
-                className="fa fa-chevron-left arrow"
-                aria-hidden="true" />
-            </a>
-          </div>
-          <h1 className="text-center">Sign Up</h1>
-          <h4 className="text-center">Join Now for free ride credit.</h4>
-          <hr />
-        </header>
+        <HeaderValidation />
         {this.state.show &&
           <div>
             <div>
@@ -82,31 +98,26 @@ class SignUpPhoneValidation extends Component {
               <h5><strong>LAB-{this.state.pin}</strong></h5>
             </div>
             <form onSubmit={(e) => {
-              e.preventDefault();
-              this.validatePin(this.valueInput);
-            }}>
-              <strong>LAB-</strong>
-              <input type="number"
-                value={this.valueInput}
-                onChange={(e) => { this.inputChange(e) }} />
-              {
+          e.preventDefault();
+          this.validatePin(this.valueInput);
+        }}>
+          <strong>LAB-</strong>
+          <input type="number"
+            className="inputPin"
+            value={this.valueInput}
+            onChange={(e) => { this.inputChange(e) }} />
+            {
 
-                this.state.validate ?
-                  <NavLink
-                    to="/signup_profile"
-                    className="btn btn-lg btnSiguiente "
-                  >
-                    Next
-              </NavLink>
-                  :
-                  <button
-                    className="btn btn-lg btnSiguiente disabled"
-                  >
-                    Next
-          </button>
-
-              }
-            </form>
+              this.state.validate ?
+                <NavLink
+                  to="/signup_profile"
+                  className="btn btn-lg btnSiguiente ">
+                  Next
+                </NavLink>
+                :
+                <button className="btn btn-lg btnSiguiente disabled"> Next</button>
+            }
+        </form>
           </div>
         }
         {!this.state.show &&
