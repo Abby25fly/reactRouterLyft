@@ -58,7 +58,8 @@ const Map = ({ model }) => {
 
     <HeaderMap />
 
-    <div className="col-md-3 col-sm-3">
+    <div className="col-md-8 col-sm-8">
+      
       <div className="form-group">
         <label htmlFor="destino"> Destino </label>
         <ReactGoogleAutocomplete
@@ -71,13 +72,19 @@ const Map = ({ model }) => {
           componentRestrictions={{ country: "pe" }}
         />
       </div>
+     
     </div>
+    <center>
     <div className="col-md-3 col-sm-3">
-      <button id="ruta" onClick={onPathBntClick}>
+      <button className="ruta" onClick={onPathBntClick}>
         <i className="fa fa-bicycle" aria-hidden="true"></i>
         Ruta
 			</button>
+      <NavLink to={"/priceLyft"}>
+         <button className="ruta">Set PickUp</button>
+      </NavLink>
     </div>
+    </center>
     <GoogleMaps
       model={model}
       properties={properties}

@@ -6,9 +6,9 @@
   height: 100vh;
 }
 
-#ruta{
+.ruta{
   border:white 3px solid;
-  width: 30%;
+  width: 40%;
   padding: 5px;
   border-radius: 10px;
   color:white;
@@ -61,7 +61,7 @@ nav{
   border:1px solid #ccc;
 }
 .inputs{
-  margin:5px 0;
+  margin:5px 0px;
 }
 .inp-l{
   border-left: 0;

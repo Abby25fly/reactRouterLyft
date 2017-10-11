@@ -1,0 +1,10 @@
+.btnPrice{
+    border:white 3px solid;
+    width: 40%;
+    padding: 5px;
+    border-radius: 10px;
+    color:white;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #d6155c;
+}
