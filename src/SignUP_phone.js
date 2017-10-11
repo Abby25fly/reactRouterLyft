@@ -85,7 +85,7 @@ class SignUP_phone extends Component {
                   data-toggle="validator"
                   role="form"
                   action="signUp2.html">
-                  <div className="">
+                  <div className="input-group">
                     <Countries />
                     <input
                       id="telNumber"
