@@ -19,6 +19,7 @@ input {
 
 .dataRegister {
     width: 100%;
+<<<<<<< HEAD
 }
 
 .dataInput {
@@ -39,6 +40,26 @@ input {
 
 .next {
     border: white 3px solid;
+=======
+    }
+    .dataInput{
+    margin:5px 0px;
+    }
+  .icon {
+      position:relative;
+      top:28px;
+      left: 10px;
+      z-index: 2000;
+  }
+  .check {
+      left: 80px;
+      text-align: justify;
+  }
+ 
+
+  .next{
+    border:white 3px solid;
+>>>>>>> a5aa3685b7372735f49d1e3414fcf19b341884e6
     width: 100%;
     padding: 10px;
     border-radius: 10px;
