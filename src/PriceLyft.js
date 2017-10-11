@@ -1,11 +1,12 @@
-import './PriceLyft.css';
+
 import React, { Component } from 'react';
+import './PriceLyft.css';
 import {
-    BrowserRouter,
-    Route,
-    Switch,
-    NavLink,
-    Redirect
+  BrowserRouter,
+  Route,
+  Switch,
+  NavLink,
+  Redirect
 } from 'react-router-dom'
 
 class PriceLyft extends Component {
@@ -50,14 +51,18 @@ class PriceLyft extends Component {
         return (
             <div>
                 <HeaderPrice />
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="Pricebody" id="modalBody">
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-md-12 col-sm-12 col-xs-12">
+                            <div className="Pricebody" id="modalBody">
                             </div>
-                            <div class="Pricefooter">
-                                <button type="button" class="btn btnPrice">Close</button>
+                            <center>
+                            <div className="Pricefooter">
+                                <NavLink to={"/map"}>
+                                    <button type="button" className="btn btnPrice">Close</button>
+                                </NavLink>
                             </div>
+                            </center>
                         </div>
                     </div>
                 </div>
