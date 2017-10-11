@@ -11,6 +11,7 @@ import Home from './Home';
 import SignUp_phone from './SignUP_phone';
 import SignUP_profile from './SignUP_profile';
 import Map from './Map';
+import Validation from './SignUpPhoneValidation';
 
 const NotFound = (props) => {
 	return (
@@ -27,6 +28,7 @@ const App = (props) => {
 				       render={() => <Redirect to= {'/home'}/>}/>
 				<Route  path="/home" render={() => <Home model={model} />}/>
 				<Route  path="/signup_phone" render={() => <SignUp_phone model={model} />}/>
+				<Route  path="/signup_validation" render={() => <Validation model={model} />}/>
 				<Route  path="/signup_profile" render={() => <SignUP_profile model={model} />}/>
 				<Route  path="/map" render={() => <Map model={model} />}/>
 

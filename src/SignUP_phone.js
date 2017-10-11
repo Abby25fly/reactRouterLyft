@@ -45,22 +45,6 @@ const Modal=(randomCode)=>{
 
   );
 }
-const Random = ()=>{
-  let text = "";
-  let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-  for (let i = 0; i < 5; i++)
-      text += possible.charAt(Math.floor(Math.random() * possible.length));
-  console.log(text);
-  return text;
-}
-
-const getCode=()=>{
-  let code=Random();
-  let randomCode = "LAB-" + code;
-  alert("Your code is: " + randomCode);
-  Modal(randomCode);
-}
 
 const SignUP_phone = ({model}) => {
     return (
@@ -123,10 +107,9 @@ const SignUP_phone = ({model}) => {
                 </form>
               </div >
               <div className="col-md-12 col-xs-12 btn-next">
-                <NavLink to={"/signup_profile"}>
+                <NavLink to={"/signup_validation"}>
                   <button
-                  className="btn btn-lg btn-block next"
-                  onClick={getCode}>
+                  className="btn btn-lg btn-block next">
                   Next
                   </button>
                 </NavLink>

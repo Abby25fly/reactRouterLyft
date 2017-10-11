@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import GoogleMaps from './GoogleMaps';
+import './Map.css';
 import ReactGoogleAutocomplete from './ReactGoogleAutocomplete';
  import {
 	BrowserRouter,
@@ -10,7 +11,7 @@ import ReactGoogleAutocomplete from './ReactGoogleAutocomplete';
 } from 'react-router-dom'
 
 
-const LyftMap = ({model}) => {
+const Map = ({model}) => {
 
 	const state = {
 		properties: model.properties,
@@ -70,7 +71,7 @@ const LyftMap = ({model}) => {
 			</div>
 		</div>
 		<div className="col-md-3 col-sm-3">
-			<button id="ruta" className="btn btn-success" onClick={onPathBntClick}>
+			<button id="ruta" onClick={onPathBntClick}>
 				<i className="fa fa-bicycle" aria-hidden="true"></i>
 				Ruta
 			</button>
@@ -91,4 +92,4 @@ const LyftMap = ({model}) => {
 }
 
 
-export default LyftMap;
+export default Map;
