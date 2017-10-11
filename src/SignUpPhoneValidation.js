@@ -97,10 +97,10 @@ class SignUpPhoneValidation extends Component {
               <h4 >Tu código Lyft es:</h4>
               <h5><strong>LAB-{this.state.pin}</strong></h5>
             </div>
-            <form onSubmit={(e) => {
-          e.preventDefault();
-          this.validatePin(this.valueInput);
-        }}>
+          <form onSubmit={(e) => {
+              e.preventDefault();
+              this.validatePin(this.valueInput);
+            }}>
           <strong>LAB-</strong>
           <input type="number"
             className="inputPin"
@@ -117,7 +117,7 @@ class SignUpPhoneValidation extends Component {
                 :
                 <button className="btn btn-lg btnSiguiente disabled"> Next</button>
             }
-        </form>
+          </form>
           </div>
         }
         {!this.state.show &&

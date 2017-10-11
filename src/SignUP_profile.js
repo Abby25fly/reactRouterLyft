@@ -77,7 +77,7 @@ class SignUP_profile extends Component {
                 <HeaderProfile />
                 <section className="container-fluid">
                     <div className="row">
-                        <center>
+
                         <div className="col-md-12 col-xs-12 col-sm-12">
                             <form id="registrationForm" >
                                 <InputProfile />
@@ -88,7 +88,7 @@ class SignUP_profile extends Component {
                                         <input type="email" className="form-control" name="email" id="eName" placeholder="e-mail" />
                                     </div>
                                 </div>
-                                <label className="form-check-label">
+                                <label >
                                     <input className="form-check-input" id="agreeUser" type="checkbox" onChange={onInputChange} />
                                     I agree to Lyft's <a href="lyft.com"> Terms of Service</a>
                                 </label>
@@ -106,7 +106,7 @@ class SignUP_profile extends Component {
                                 }
                             </form>
                             </div>
-                        </center>
+                 
                     </div>
                 </section>
             </div>

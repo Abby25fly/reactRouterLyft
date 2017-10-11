@@ -1,4 +1,5 @@
 import React from 'react';
+import './Map.css'
 
 const loadMaps = (cb) => {
 	// window.google.maps script loading garbage

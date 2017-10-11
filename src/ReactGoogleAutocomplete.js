@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Map.css'
 
 export default  class ReactGoogleAutocomplete extends React.Component {
 	static propTypes = {

@@ -14,7 +14,7 @@ class SignUP_phone extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      complete: false
+      completed: false
     }
 
     this.userInfo = {
@@ -28,13 +28,15 @@ class SignUP_phone extends Component {
     console.log('SignUpForm');
 
     const onInputChange = (e) => {
-      if (e.target.value != "") {
+      if (e.target.value === "") {
+        console.log("false");
         this.setState({
-          complete: true
+          completed: false
         });
       } else {
+        console.log("true");
         this.setState({
-          complete: false
+          completed: true
         });
       }
     }
@@ -78,13 +80,9 @@ class SignUP_phone extends Component {
     const FormNumber = () => {
       return (
         <section>
-          <div className="container">
-            <div className="row">
               <div className="col-xs-10 col-xs-offset-1 text-center">
                 <form
-                  data-toggle="validator"
-                  role="form"
-                  action="signUp2.html">
+                  data-toggle="validator">
                   <div className="input-group">
                     <Countries />
                     <input
@@ -102,12 +100,12 @@ class SignUP_phone extends Component {
                   <br />
                   <h5> We´ll send a text to verify your phone</h5>
                   {
-                    this.state.complete ?
-                      <NavLink to={"/signup_validation"}>
-                        <button
+                    this.state.completed ?
+                      <NavLink to={"/signup_validation"}
+
                           className="btn btn-lg btn-block next">
                           Next
-                  </button>
+
                       </NavLink>
                       :
                       <button
@@ -115,8 +113,7 @@ class SignUP_phone extends Component {
                   }
                 </form>
               </div >
-            </div>
-          </div>
+          
         </section>
       );
     }
