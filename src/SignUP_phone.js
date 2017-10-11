@@ -45,22 +45,6 @@ const Modal=(randomCode)=>{
 
   );
 }
-const Random = ()=>{
-  let text = "";
-  let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-  for (let i = 0; i < 5; i++)
-      text += possible.charAt(Math.floor(Math.random() * possible.length));
-  console.log(text);
-  return text;
-}
-
-const getCode=()=>{
-  let code=Random();
-  let randomCode = "LAB-" + code;
-  alert("Your code is: " + randomCode);
-  Modal(randomCode);
-}
 
 const SignUP_phone = ({model}) => {
     return (
@@ -69,15 +53,10 @@ const SignUP_phone = ({model}) => {
           <div className="container">
             <div className="row">
               <div className="col-md-1 col-xs-1 text-center">
-<<<<<<< HEAD
-                <a href="index.html">
-                  <i className="fa fa-chevron-left flecha" aria-hidden="true" />
-=======
                 <a href="javascript:window.history.back();">
                 <i
                 className="fa fa-chevron-left arrow"
                 aria-hidden="true" />
->>>>>>> 20c0ddfeb50977b7daa81b3aa90737410ccbc02d
                 </a>
               </div>
               <div className="col-md-10 col-xs-10 text-center">
@@ -92,16 +71,6 @@ const SignUP_phone = ({model}) => {
           <div className="container">
             <div className="row">
               <div className="col-xs-10 col-xs-offset-1 text-center">
-<<<<<<< HEAD
-                <form data-toggle="validator" role="form" action="signUp2.html">
-                  <div className="input-group">
-                    <div className="input-group-btn ">
-                      <div className="form-group">
-                        <select className="form-control">
-                          <option>Peru +051</option>
-                          <option>México +052</option>
-                          <option>Chile +056</option>
-=======
                 <form
                 data-toggle="validator"
                 role="form"
@@ -119,51 +88,10 @@ const SignUP_phone = ({model}) => {
                           <option>
                           Chile +056
                           </option>
->>>>>>> 20c0ddfeb50977b7daa81b3aa90737410ccbc02d
                         </select>
                       </div>
                     </div>
                     <input
-<<<<<<< HEAD
-                      id="telNumber"
-                      className="form-control"
-                      type="tel"
-                      data-validation="number"
-                      maxLength={9}
-                      placeholder={986171293}
-                      pattern=".{9,}"
-                      title="9 números o menos"
-                      required
-                    />
-                  </div>
-                  <br />
-                  <h5> We´ll send a text to verify your phone</h5>
-
-                <div className="btn-next">
-                <a >
-                  <button
-                    type="submit"
-                    id="btnNext"
-                    className="btn btn-lg btn-block next"
-                  >
-                    Next
-                  </button>
-                </a>
-                
-              </div>
-                </form>
-              </div>
-             
-              
-            </div>
-          </div>
-        </section>
-      </div>
-    );
-  }
-}
-
-=======
                     id="telNumber"
                     className="form-control"
                     type="tel"
@@ -179,10 +107,9 @@ const SignUP_phone = ({model}) => {
                 </form>
               </div >
               <div className="col-md-12 col-xs-12 btn-next">
-                <NavLink to={"/signup_profile"}>
+                <NavLink to={"/signup_validation"}>
                   <button
-                  className="btn btn-lg btn-block next"
-                  onClick={getCode}>
+                  className="btn btn-lg btn-block next">
                   Next
                   </button>
                 </NavLink>
@@ -195,4 +122,3 @@ const SignUP_phone = ({model}) => {
 }
 
 export default SignUP_phone ;
->>>>>>> 20c0ddfeb50977b7daa81b3aa90737410ccbc02d

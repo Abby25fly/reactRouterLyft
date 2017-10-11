@@ -1,0 +1,36 @@
+.btnVolver {
+    position: absolute;
+    top: 4%;
+    left: 1%;
+}
+
+.btnVolver a {
+    color: black;
+}
+
+.btnVolver a:hover {
+    font-size: 0.8em;
+}
+
+.volver{
+    font-size: 4em;
+}
+
+.btnSiguiente{
+    border:white 3px solid;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    color:white;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #d6155c;
+}
+
+.btn[disabled], fieldset[disabled] .btn {
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: .65;
+    background-color: rgba(255, 0, 191, 0.53);
+    color: white;
+}
