@@ -77,9 +77,14 @@ class SignUP_phone extends Component {
         </div>
       );
     }
-    const FormNumber = () => {
-      return (
-        <section>
+
+
+
+    return (
+      <div className="container-fluid" >
+        <div className="row">
+          <HeaderSignUp />
+          <section>
               <div className="col-xs-10 col-xs-offset-1 text-center">
                 <form
                   data-toggle="validator">
@@ -115,16 +120,6 @@ class SignUP_phone extends Component {
               </div >
           
         </section>
-      );
-    }
-
-
-
-    return (
-      <div className="container-fluid" >
-        <div className="row">
-          <HeaderSignUp />
-          <FormNumber />
         </div>
       </div>
     );
